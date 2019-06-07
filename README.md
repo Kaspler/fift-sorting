@@ -2,7 +2,8 @@
 
 Implementation of sorting algorithms in the programming language Fift.
 
-Currently, only bubble sort is implemented. 
+Currently, only bubble sort is implemented.
+Contributors are welcome to implement other sorting algorithms and suggest improvements.
 
 Example:
 
