@@ -6,7 +6,7 @@ Currently, only bubble sort is implemented.
 
 Example:
 
-    "./bubblesort.fif" include
+    "./BubbleSort.fif" include
     
     // Put elements to sort in the stack
     5 1 3 2 4 
