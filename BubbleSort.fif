@@ -1,0 +1,52 @@
+/*
+    sort ( ... n - ...), 
+        rearranges n stack entries located immediately below the topmost element using bubble sort algorithm
+*/
+{
+    // Create an index of the loop.
+    // Let's call it I
+    // I will go from n-1 to 1
+    dup
+
+    // Thid is a loop that repeats n times
+    {
+        // Decrement the I by 1
+        1 -
+        dup
+
+        // Create an index of the inner loop
+        // Let's call it J
+        // J will go from I - 1 to 0 
+        dup
+        
+        // This is an inner loop
+        {
+            // Decrement J by 1
+            1 -
+
+            // Pick the element located at the place [J + 2] from the top of the stack
+            // We are skipping 2 elements, because they are J and I respectively
+            dup 2 + pick
+
+            // Pick the element located at the place [I + 3] from the top of the stack
+            // We are skipping 3 elements, because thouse 3 elements are J, I and the element we already picked
+            // In more detail first we are picking 2nd element from the top of the stack which is I, decrementing 3 to skip 3 elements and then picking the element we actually want
+            2 pick 3 + pick
+
+            // Compare and swap if needed
+            > {
+                // Get indexes of the elements to swap by picking I and J and decrementing both by 2
+                over 2 + over 2 +
+
+                // Swap 2 elements
+                exch2
+            } if
+        } swap times
+
+        // Clear J from the stack
+        drop
+    } swap times
+
+    // Clear I from the stack
+    drop
+} : bubblesort
