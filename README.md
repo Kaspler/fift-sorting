@@ -19,3 +19,5 @@ Example:
     .s
 
 Fift is a new programming language specifically designed for creating and managing TON Blockchain smart contracts, and its features used for interaction with the TON Virtual Machine and the TON Blockchain.
+
+TON refers to Telegram Open Network.
